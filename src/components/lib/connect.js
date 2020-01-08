@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import EventContext from './context';
 
+const MSG_NO_EVENT_MITT = 'Plealse install @feizheng/event-mitt for your app.';
+
 export default (WrapComponent) => {
   class ContextProps extends Component {
     constructor(inProps) {
@@ -11,6 +13,10 @@ export default (WrapComponent) => {
 
     attach() {
       const { app } = EventContext.props;
+      if (typeof app.on !== 'function') {
+        throw new Error(MSG_NO_EVENT_MITT);
+      }
+
       const { events } = WrapComponent;
       const keys = Object.keys(events || []);
       this._resources = keys.map((key) => {
@@ -51,7 +57,6 @@ export default (WrapComponent) => {
     }
   }
 
-  ContextProps.displayName = 'react-modal-mannaer-connect';
   const forwardRef = (props, ref) => {
     return <ContextProps {...props} forwardedRef={ref} />;
   };
