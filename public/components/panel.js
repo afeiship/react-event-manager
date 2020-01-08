@@ -5,8 +5,8 @@ import connect from '@/components/lib/connect';
 export default class extends React.Component {
   componentDidMount() {
     setTimeout(() => {
-      const { app } = this.props;
-      app.emit('panel:ok', {
+      const { $app } = this.props;
+      $app.emit('panel:ok', {
         data: [1, 2, 3]
       });
     }, 2000);
@@ -19,7 +19,7 @@ export default class extends React.Component {
         <p>I am a panel</p>
         <button
           onClick={(e) => {
-            this.props.app.emit('panel:cancel');
+            this.props.$app.emit('panel:cancel');
           }}>
           Panel will cancel action
         </button>

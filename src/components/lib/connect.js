@@ -33,13 +33,16 @@ export default (WrapComponent) => {
 
     render() {
       // todo: forwardedRef not used:
+      const { forwardedRef, ...otherProps } = this.props;
       return (
         <EventContext.Consumer>
           {(globalContext) => {
+            const { inject, ...globalProps } = globalContext;
             return (
               <WrapComponent
                 ref={(root) => (this.root = root)}
-                {...globalContext}
+                {...globalProps}
+                {...otherProps}
               />
             );
           }}
@@ -49,5 +52,10 @@ export default (WrapComponent) => {
   }
 
   ContextProps.displayName = 'react-modal-mannaer-connect';
-  return ContextProps;
+  const forwardRef = (props, ref) => {
+    return <ContextProps {...props} forwardedRef={ref} />;
+  };
+
+  forwardRef.displayName = Component.displayName || Component.name;
+  return React.forwardRef(forwardRef);
 };

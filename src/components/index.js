@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import noop from '@feizheng/noop';
 import EventContext from './lib/context';
+import PropTypes from 'prop-types';
 
 const CLASS_NAME = 'react-event-manager';
 
