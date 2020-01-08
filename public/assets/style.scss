@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#app {
+  height: 100%;
+}
+
+@import "@/components/style.scss";
+
+.app-container {
+  padding: 30px 40px;
+  .panel {
+    border: 2px dashed #ccc;
+    padding: 20px;
+  }
+  .button {
+    margin-top: 30px;
+    background: #3cc51f;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    border: none;
+
+    &:active {
+      background: darken(#3cc51f, 10%);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
