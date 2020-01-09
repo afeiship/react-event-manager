@@ -58,7 +58,7 @@ npm update @feizheng/react-event-manager
   ReactDOM.render(<App />, document.getElementById('app'));
 
 
-  /*2. emit: panel.js emit the event: ok/cancel */
+  /*2. publish: panel.js emit the event: ok/cancel */
   import React from 'react';
   import { event } from '@/main';
 
