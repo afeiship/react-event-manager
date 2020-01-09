@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import connect from '@/components/lib/connect';
+import { event } from '@/main';
 
-@connect
+@event
 export default class extends React.Component {
   componentDidMount() {
     setTimeout(() => {
