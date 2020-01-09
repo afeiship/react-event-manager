@@ -10,7 +10,7 @@ export default class extends Component {
   static version = '__VERSION__';
   static propTypes = {
     className: PropTypes.string,
-    app: PropTypes.any,
+    value: PropTypes.any,
     inject: PropTypes.func
   };
 
@@ -19,12 +19,12 @@ export default class extends Component {
   };
 
   render() {
-    const { app, inject, children } = this.props;
-    EventContext.props = { app };
-    inject(app);
+    const { value, inject, children } = this.props;
+    EventContext.props = { app: value };
+    inject(value);
 
     return (
-      <EventContext.Provider value={{ $app: app, inject }}>
+      <EventContext.Provider value={{ $app: value, inject }}>
         {children}
       </EventContext.Provider>
     );

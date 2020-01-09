@@ -12,11 +12,11 @@ npm update @feizheng/react-event-manager
 ```
 
 ## properties
-| property  | type   | default | description |
-| --------- | ------ | ------- | ----------- |
-| className | String | -       | -           |
-| value     | -      | -       | -           |
-| onChange  | -      | -       | -           |
+| property  | type     | default | description                      |
+| --------- | -------- | ------- | -------------------------------- |
+| className | String   | -       | -                                |
+| value     | Any      | -       | The app instance                 |
+| inject    | Function | -       | The injector for you application |
 
 ## usage
 1. import css
@@ -44,7 +44,7 @@ npm update @feizheng/react-event-manager
 
     render() {
       return (
-        <ReactEventManager app={this}>
+        <ReactEventManager value={this}>
           <div className="app-container">
             <Panel />
             <Button>I AM a button</Button>

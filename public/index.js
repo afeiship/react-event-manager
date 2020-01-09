@@ -14,7 +14,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <ReactEventManager app={this}>
+      <ReactEventManager value={this}>
         <div className="app-container">
           <Panel />
           <Button>I AM a button</Button>
