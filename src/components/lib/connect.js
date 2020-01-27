@@ -40,13 +40,18 @@ export default (WrapComponent) => {
     render() {
       // todo: forwardedRef not used:
       const { forwardedRef, ...otherProps } = this.props;
+      const refType = typeof forwardedRef;
       return (
         <EventContext.Consumer>
           {(globalContext) => {
             const { inject, ...globalProps } = globalContext;
             return (
               <WrapComponent
-                ref={(root) => (this.root = root)}
+                ref={(root) => {
+                  refType === 'object' && (forwardRef.current = root);
+                  refType === 'function' && forwardRef(root);
+                  this.root = root;
+                }}
                 {...globalProps}
                 {...otherProps}
               />
