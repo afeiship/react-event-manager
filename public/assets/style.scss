@@ -1,21 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-html,
-body,
-#app {
-  height: 100%;
-}
-
 @import "@/components/style.scss";
+@import "~@jswork/react-github-corner/dist/style.scss";
+@import "~@jswork/react-sw-update-tips/dist/style.scss";
+@import "~@jswork/react-demokit/dist/style.scss";
 
 .app-container {
-  padding: 30px 40px;
-  width: 80%;
-  margin: 0 auto;
   .panel {
     border: 2px dashed #ccc;
     padding: 20px;
+  }
+
+  .is-body {
+    padding: 20px;
+    background: #fff;
+    width: 50%;
+    min-width: 320px;
+    margin: 0 auto;
+
+    text-align: center;
   }
 }
