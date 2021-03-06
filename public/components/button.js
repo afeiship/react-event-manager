@@ -27,7 +27,7 @@ export default class extends React.Component {
     console.log(this.props);
     return (
       <button
-        className="button"
+        className="button is-primary is-fullwidth"
         onClick={(e) => {
           console.log(e);
         }}>

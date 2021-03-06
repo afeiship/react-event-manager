@@ -18,6 +18,7 @@ export default class extends React.Component {
         <h1>Panel title</h1>
         <p>I am a panel</p>
         <button
+          className="button my-3 is-info is-fullwidth"
           onClick={(e) => {
             this.props.$app.emit('panel:cancel');
           }}>

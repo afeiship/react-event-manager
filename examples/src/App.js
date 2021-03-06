@@ -3,7 +3,7 @@ import logo from "./logo.svg";
 import Wrapper from "./lib/wrapper";
 import Button from "./button";
 import Panel from "./panel";
-import EventMitt from "@feizheng/event-mitt";
+import EventMitt from "@jswork/event-mitt";
 import "./App.css";
 
 class App extends React.Component {

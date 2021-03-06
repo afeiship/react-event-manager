@@ -1,9 +1,10 @@
+import ReactDemokit from '@jswork/react-demokit';
 import ReactEventManager from '../src/main';
 import ReactDOM from 'react-dom';
 import React from 'react';
 import Button from './components/button';
 import Panel from './components/panel';
-import EventMitt from '@feizheng/event-mitt';
+import EventMitt from '@jswork/event-mitt';
 import './assets/style.scss';
 
 class App extends React.Component {
@@ -14,12 +15,16 @@ class App extends React.Component {
 
   render() {
     return (
-      <ReactEventManager value={this}>
-        <div className="app-container">
-          <Panel />
-          <Button>I AM a button</Button>
-        </div>
-      </ReactEventManager>
+      <ReactDemokit
+        className="p-3 app-container"
+        url="https://github.com/afeiship/react-dice">
+        <ReactEventManager value={this}>
+          <div className="app-container">
+            <Panel />
+            <Button>I AM a button</Button>
+          </div>
+        </ReactEventManager>
+      </ReactDemokit>
     );
   }
 }

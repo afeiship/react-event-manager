@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import EventContext from './context';
 
-const MSG_NO_EVENT_MITT = 'Plealse install @feizheng/event-mitt for your app.';
+const MSG_NO_EVENT_MITT = 'Plealse install @jswork/event-mitt for your app.';
 
 export default (WrapComponent) => {
   class ContextProps extends Component {

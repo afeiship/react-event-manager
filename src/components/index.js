@@ -1,16 +1,25 @@
 import React, { Component } from 'react';
-import noop from '@feizheng/noop';
+import noop from '@jswork/noop';
 import EventContext from './lib/context';
 import PropTypes from 'prop-types';
 
 const CLASS_NAME = 'react-event-manager';
 
-export default class extends Component {
+export default class ReactEventManager extends Component {
   static displayName = CLASS_NAME;
   static version = '__VERSION__';
   static propTypes = {
+    /**
+     * The extended className for component.
+     */
     className: PropTypes.string,
+    /**
+     * The app instance.
+     */
     value: PropTypes.any,
+    /**
+     * The injector for you application.
+     */
     inject: PropTypes.func
   };
 

@@ -12,12 +12,7 @@ npm install -S @jswork/react-event-manager
 ```
 
 ## properties
-| Name      | Type   | Required | Default | Description                           |
-| --------- | ------ | -------- | ------- | ------------------------------------- |
-| className | string | false    | -       | The extended className for component. |
-| value     | any    | false    | -       | The app instance.                     |
-| inject    | func   | false    | noop    | The injector for you application.     |
-
+__GENERATE_DOCS__
 
 ## usage
 1. import css
